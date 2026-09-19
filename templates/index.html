@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Hausa & Yoruba Fake News Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Fake News Detection System</h1>
+            <p>Hausa and Yoruba News Classification</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Check News</h2>
+            <p>
+                Select a language and enter the news text you want to check.
+            </p>
+        </section>
+
+        <section class="detection-box">
+
+            <label for="language">Select Language</label>
+
+            <select id="language">
+                <option value="">-- Select Language --</option>
+                <option value="hausa">Hausa</option>
+                <option value="yoruba">Yoruba</option>
+            </select>
+
+            <label for="newsText">Enter News</label>
+
+            <textarea
+                id="newsText"
+                placeholder="Enter or paste the news text here..."
+            ></textarea>
+
+            <button id="detectButton">Detect News</button>
+
+            <div id="result" class="result">
+                <h3>Prediction Result</h3>
+                <p id="prediction">Your result will appear here.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Hausa & Yoruba Fake News Detection System</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
